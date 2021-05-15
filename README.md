@@ -1,2 +1,2 @@
-# document-scanner
+# Censor Keywords
 Code Challenge
