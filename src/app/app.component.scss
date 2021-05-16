@@ -1,6 +1,11 @@
+button {
+  font-size: 1.5em;
+}
+
 div {
   display: flex;
   flex-direction: column;
+  align-content: center;
   border: 0.1em solid black;
   padding: 1em;
   width: 30em;
@@ -11,6 +16,12 @@ header {
   text-align: center;
 }
 
+input {
+  margin-bottom: 1em;
+  font-size: 1em;
+  height: 1.5em;
+}
+
 main {
   display: flex;
   justify-content: space-around;
@@ -18,7 +29,7 @@ main {
 }
 
 textarea {
-  width: 30em;
+  width: 35.5em;
   height: 25em;
   margin-bottom: 2.5em;
 }
