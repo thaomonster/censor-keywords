@@ -1,5 +1,7 @@
 button {
   font-size: 1.5em;
+  background-color: rgb(109, 179, 240);
+  border-radius: 0.3em;
 }
 
 div {
@@ -12,8 +14,14 @@ div {
   height: 30em;
 }
 
+h1 {
+  margin: 0;
+}
+
 header {
   text-align: center;
+  background-color: rgb(109, 179, 240);
+  padding: 1em;
 }
 
 input {
