@@ -9,8 +9,15 @@ import { Component } from '@angular/core';
     <main>
       <div>
         <b>Censor keywords goes here</b>
-        <input type='text' placeholder="Example 'protection', 'important', 'safety' " />
-        <textarea type ='text' placeholder='Copy and paste document here'></textarea>
+        <input 
+          #keywordInput
+          type='text' 
+          placeholder="Example 'protection', 'important', 'safety' " 
+        />
+        <textarea
+          type='text' 
+          placeholder='Copy and paste document here'>
+        </textarea>
         <button (click)='onClick()'>Submit</button>
       </div>
       <div>
