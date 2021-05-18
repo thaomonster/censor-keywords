@@ -3,10 +3,10 @@
 </header> 
 <main>
   <form [formGroup]='inputForm' (ngSubmit)='onSubmit()'>
-    <label><b>Censor keyword goes here:</b></label>
+    <label><b>Censor ONE keyword  or ONE phrase goes here:</b></label>
     <input 
       type='text' 
-      placeholder="Please choose one keyword to enter here"
+      placeholder="Please choose ONE keyword or ONE phrase to enter here"
       formControlName='keywordInput'
     />
     <textarea
