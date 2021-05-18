@@ -14,7 +14,7 @@
       placeholder='Copy and paste document here'
       formControlName='documentInput'
     ></textarea>
-    <button>Submit</button>
+    <button type='submit' [disabled]='!inputForm.valid'>Submit</button>
   </form>
   <div>
     Results go here

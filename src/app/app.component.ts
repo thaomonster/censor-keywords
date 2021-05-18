@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class AppComponent {
   title = 'Censor Keywords';
   inputForm = new FormGroup({
-    keywordInput: new FormControl(''),
-    documentInput: new FormControl('')
+    keywordInput: new FormControl('', Validators.required),
+    documentInput: new FormControl('', Validators.required)
   });
   
 
