@@ -23,7 +23,7 @@ export class AppComponent {
       const result = document.replaceAll(keyword, 'XXXX')
       this.resultDoc = result
     } else {
-      console.log('not matching word')
+      console.log('no matching word')
     }
 
     //use replace to replace all words that match the keyword
