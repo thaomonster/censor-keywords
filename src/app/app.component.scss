@@ -52,6 +52,31 @@ textarea {
   }
 }
 
+@media screen and (max-width: 411px) {
+  form, 
+  div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: 0.1em solid black;
+    padding: 1em;
+    width: 20em;
+    height: 30em;
+  }
+
+  main {
+    display: grid;
+    grid-gap: 1.5em;
+    margin-top: 1em;
+  }
+
+  textarea {
+    width: 23.5em;
+    height: 25em;
+    margin-bottom: 2.5em;
+  }
+}
+
 @media screen and (max-width: 375px) {
   form, 
   div {
