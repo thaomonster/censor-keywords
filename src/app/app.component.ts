@@ -25,11 +25,5 @@ export class AppComponent {
     } else {
       this.resultDoc = 'No matching words found.'
     }
-
-    //use replace to replace all words that match the keyword
-    //use a condtional to do this
-
-    // console.log(this.inputForm.get('keywordInput')!.value)
-    // console.log(this.inputForm.get('documentInput')!.value)
   };
 }
