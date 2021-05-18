@@ -1,35 +1,29 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <header>
-      <h1>Censor Keyword</h1>
-    </header> 
-    <main>
-      <div>
-        <b>Censor keywords goes here</b>
-        <input 
-          #keywordInput
-          type='text' 
-          placeholder="Example 'protection', 'important', 'safety' " 
-        />
-        <textarea
-          type='text' 
-          placeholder='Copy and paste document here'>
-        </textarea>
-        <button (click)='onClick()'>Submit</button>
-      </div>
-      <div>
-        Results go here
-      </div>
-    </main>`,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {
   title = 'Censor Keywords';
-  onClick() {
-    console.log('working')
-  }
+  resultDoc=''
+  inputForm = new FormGroup({
+    keywordInput: new FormControl('', Validators.required),
+    documentInput: new FormControl('', Validators.required),
+  });
+
+  onSubmit = () => {
+    const keyword = this.inputForm.get('keywordInput')!.value
+    const document = this.inputForm.get('documentInput')!.value
+
+    if (document.includes(keyword)) {
+      const result = document.replaceAll(keyword, 'XXXX')
+      this.resultDoc = result
+    } else {
+      this.resultDoc = 'No matching words found.'
+    }
+  };
 }
