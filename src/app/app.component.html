@@ -1,0 +1,22 @@
+<header>
+  <h1>Censor Keyword</h1>
+</header> 
+<main>
+  <form [formGroup]='inputForm' (ngSubmit)='onSubmit()'>
+    <label><b>Censor keyword goes here:</b></label>
+    <input 
+      type='text' 
+      placeholder="Please choose one keyword to enter here"
+      formControlName='keywordInput'
+    />
+    <textarea
+      type='text' 
+      placeholder='Copy and paste document here'
+      formControlName='documentInput'
+    ></textarea>
+    <button>Submit</button>
+  </form>
+  <div>
+    Results go here
+  </div>
+</main>

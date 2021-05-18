@@ -1,35 +1,21 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <header>
-      <h1>Censor Keyword</h1>
-    </header> 
-    <main>
-      <div>
-        <b>Censor keywords goes here</b>
-        <input 
-          #keywordInput
-          type='text' 
-          placeholder="Example 'protection', 'important', 'safety' " 
-        />
-        <textarea
-          type='text' 
-          placeholder='Copy and paste document here'>
-        </textarea>
-        <button (click)='onClick()'>Submit</button>
-      </div>
-      <div>
-        Results go here
-      </div>
-    </main>`,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {
   title = 'Censor Keywords';
-  onClick() {
-    console.log('working')
-  }
+  inputForm = new FormGroup({
+    keywordInput: new FormControl(''),
+    documentInput: new FormControl('')
+  });
+  
+
+  onSubmit() {
+    console.log(this.inputForm.value)
+  };
 }
