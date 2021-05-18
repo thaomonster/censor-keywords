@@ -23,6 +23,7 @@ header {
   text-align: center;
   background-color: rgb(109, 179, 240);
   padding: 1em;
+  width: 100%;
 }
 
 input {
@@ -41,4 +42,36 @@ textarea {
   width: 35.5em;
   height: 25em;
   margin-bottom: 2.5em;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    display: grid;
+    grid-gap: 1.5em;
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  form, 
+  div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: 0.1em solid black;
+    padding: 1em;
+    width: 15em;
+    height: 25em;
+  }
+
+  main {
+    display: grid;
+    grid-gap: 1.5em;
+  }
+
+  textarea {
+    width: 17em;
+    height: 25em;
+    margin-bottom: 2.5em;
+  }
 }
